@@ -134,6 +134,9 @@ vim.o.signcolumn = 'yes'
 -- Add color columns 80 & 120
 vim.o.colorcolumn = '80,120'
 
+-- set expand tab
+vim.o.expandtab = true
+
 -- Decrease update time
 vim.o.updatetime = 250
 
@@ -964,6 +967,16 @@ require('lazy').setup({
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  },
+  -- Flutter plugin
+  {
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+    },
+    config = true,
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
